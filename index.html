@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body id="body">
+    <div class="mode">
+      <span id="dark" onclick="darkMode(this.id)"> &#127769;</span>
+      <span id="light" onclick="darkMode(this.id)"> &#9728;</span>
+    </div>
+    <div class="container">
+      <div class="currency">
+        <p>your currency is <span class="currency">USD $</span></p>
+        <p>
+          your cryptocurrency is
+          <span class="cryptocurrency">btc &#8383; </span>
+        </p>
+      </div>
+
+      <div id="inputs">
+        <label for="investment">Investment</label>
+        <input type="number" id="investment"  onkeyup="calc()"/>
+
+        <label for="cryptoPrice">Initial Crypto Price</label>
+        <input type="number" id="cryptoPrice" onkeyup="calc()" />
+
+        <label for="sellPrice">Selling Crypto Price</label>
+        <input type="number" id="sellPrice" onkeyup="calc()" />
+
+        <label for="fee">Investment Fee</label>
+        <input type="number" id="fee" onkeyup="calc()" />
+      </div>
+
+      <p>Total Investment Fee</p>
+      <div id="results">
+        <p id="feeResult"></p>
+        <div id="Profit">
+          crypto count =<span id="count"></span> <br />
+          net profit =<span id="netProfit"></span>
+        </div>
+        <div id="totalResult">total =<span id="total"></span></div>
+      </div>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>
